@@ -17,6 +17,9 @@ sqldelight = "1.5.3"
 dagger-hilt = "2.60.1"
 ksp = "2.3.11"
 compose-hilt = "1.4.0"
+foundation = "1.12.1"
+material3Version = "1.4.0"
+material-icons = "1.7.8"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -43,6 +46,9 @@ hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "dagge
 hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "dagger-hilt"}
 hilt-androidCompiler = { module = "androidx.hilt:hilt-compiler", version.ref = "compose-hilt"}
 hilt-navigationCompose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "compose-hilt"}
+androidx-foundation = { group = "androidx.compose.foundation", name = "foundation", version.ref = "foundation" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3Version" }
+androidx-material-icons-core = { group = "androidx.compose.material", name = "material-icons-core", version.ref = "material-icons" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
