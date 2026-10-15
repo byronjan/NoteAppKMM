@@ -15,6 +15,7 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
@@ -47,7 +48,8 @@ fun HideableSearchTextField(
         AnimatedVisibility(
             visible = isSearchActive,
             enter = fadeIn(),
-            exit = fadeOut()
+            exit = fadeOut(),
+            modifier = Modifier.align(Alignment.CenterEnd)
         ) {
             IconButton(onClick = onCloseClick) {
                 Icon(
@@ -59,7 +61,8 @@ fun HideableSearchTextField(
         AnimatedVisibility(
             visible = !isSearchActive,
             enter = fadeIn(),
-            exit = fadeOut()
+            exit = fadeOut(),
+            modifier = Modifier.align(Alignment.CenterEnd)
         ) {
             IconButton(onClick = onSearchClick) {
                 Icon(

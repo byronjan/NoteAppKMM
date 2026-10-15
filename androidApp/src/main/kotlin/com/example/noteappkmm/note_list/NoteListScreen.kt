@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.FloatingActionButton
@@ -47,7 +48,8 @@ fun NoteListScreen(
                 onClick = {
                     navController.navigate("note_detail/-1L")
                 },
-                containerColor = Color.Black
+                containerColor = Color.Black,
+                shape = CircleShape
             ) {
                 Icon(
                     imageVector = Icons.Default.Add,
@@ -56,15 +58,16 @@ fun NoteListScreen(
                 )
             }
         }
-    ) {
-        padding ->
+    ) { padding ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
         ) {
             Box(
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(90.dp),
                 contentAlignment = Alignment.Center
             ) {
                 HideableSearchTextField(
